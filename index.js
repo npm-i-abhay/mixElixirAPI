@@ -2,9 +2,15 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const config = require ('./config')
+const drinksRouter = require ('./Routes/drinks')
+const API = require ('./utils/func')
 
 
+app.use(drinksRouter)
+// app.use(API)
 app.use(express.json()) 
+
+
 mongoose.connect(config.Mongo_DB_URL, (err)=>{
     if(err) return console.log(err)
 

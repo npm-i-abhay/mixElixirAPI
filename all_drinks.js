@@ -1,4 +1,4 @@
- [
+ module.exports = [
  {
    "FIELD1": 0,
    "strDrink": "'57 Chevy with a White License Plate",

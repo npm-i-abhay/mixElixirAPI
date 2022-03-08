@@ -18,6 +18,7 @@
   "homepage": "https://github.com/npm-i-abhay/mixElixirAPI#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "fs": "^0.0.1-security",
     "mongoose": "^6.2.4"
   }
 }
