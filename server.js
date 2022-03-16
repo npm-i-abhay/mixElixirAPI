@@ -4,12 +4,7 @@ const mongoose = require('mongoose')
 const config = require ('./config')
 const drinksRouter = require ('./Routes/drinks')
 const API = require ('./utils/func')
-
-
-app.use(drinksRouter)
-// app.use(API)
-app.use(express.json()) 
-
+const userRouter = require('./Routes/user')
 
 mongoose.connect(config.Mongo_DB_URL, (err)=>{
     if(err) return console.log(err)
@@ -17,8 +12,9 @@ mongoose.connect(config.Mongo_DB_URL, (err)=>{
     console.log("connected to db successfully")
 })
 
+app.use(express.json()) 
+app.use(drinksRouter)
+app.use(userRouter)
 app.listen(process.env.PORT || 3000, ()=> console.log('server running on port 3000'))
 
-// const res = await axios.get('');
-// console.log(res)
-// const config = require ('./config')
+
