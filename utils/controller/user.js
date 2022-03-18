@@ -18,7 +18,10 @@ User.findOne({email:req.body.email}, (err,user)=>
         if(err || !user ) return res.status(500).send('user not found')
         console.log(req.body)
         if(user.comparePassword(req.body.password))
-        {   const token = jwt.sign({ id:user._id, email:user.email }, 'mysecret')
+        {   const token = jwt.sign({ 
+            id:user._id, 
+            email:user.email, 
+            username:user.username }, 'mysecret')
             res.status(201).send(token)
         }
         else {
