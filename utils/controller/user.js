@@ -24,7 +24,7 @@ User.findOne({email:req.body.email}, (err,user)=>
             email:user.email, 
             username:user.username 
             
-        }, 'mysecret')
+        }, process.env.jwtSecret)
             res.status(201).json({token, user})
             // console.log(res)
         }

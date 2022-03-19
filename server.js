@@ -6,7 +6,7 @@ const drinksRouter = require ('./Routes/drinks')
 const API = require ('./utils/func')
 const userRouter = require('./Routes/user')
 const favouritesRouter = require('./Routes/favourites')
-
+require('dotenv').config()
 
 mongoose.connect(config.Mongo_DB_URL, (err)=>{
     if(err) return console.log(err)
