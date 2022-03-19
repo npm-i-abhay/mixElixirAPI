@@ -23,7 +23,7 @@ User.findOne({email:req.body.email}, (err,user)=>
             email:user.email, 
             username:user.username 
         }, 'mysecret')
-            res.status(201).json({token, id,email, username})
+            res.status(201).json({token, user})
         }
         else {
             res.status(500).send('could not login')
