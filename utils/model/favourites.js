@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const FavouriteScehma = new Schema({
-        drinks : [{}],
+        drinks : [],
 })
 
 const Favourites = mongoose.model("Favs", FavouriteScehma)
