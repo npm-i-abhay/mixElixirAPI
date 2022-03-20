@@ -6,8 +6,7 @@ const authorizeUser = require("../utils/auth/auth")
 
 
 router.get('/', (req,res)=>{
-
-    
+// get all the drinks
     Drinks.find({},(err,data)=>{
         if(err)return res.send(err)
 
@@ -17,7 +16,5 @@ router.get('/', (req,res)=>{
 
 })
 
-
-// router.get('/find')
 
 module.exports = router

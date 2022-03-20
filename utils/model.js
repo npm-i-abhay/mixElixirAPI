@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const DrinksSchema = new Schema({
 
+// defining the drinks schema after restructuring the data 
+const DrinksSchema = new Schema({
         FIELD1: Number,
         dateModified:Date,
         idDrink: Number,

@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const bcrypt = require('bcryptjs')
+
+// defining the user Schema
 const UserSchema = new Schema({
     username:String,
     email:String,
     password: String,
-    // defining the user Schema
 })
 
 UserSchema.pre('save',function(next)//before saving data, get the password and hash it and replace the plain password with hash

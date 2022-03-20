@@ -1,7 +1,7 @@
 const all_drinks = require('../all_drinks')
 const Drinks = require('./model')
 
-
+// function to restructure data in a readable format.
 const handleApi= ()=>
 {
   try{
@@ -10,7 +10,7 @@ const handleApi= ()=>
             
             let storedIngredients =[]// array to extract and store all the ingredients from the data in an array format
             let ingredients = [] // array to store all extracted ingredients by after filtering out the empty values
-            let formatedDrinks =[] // array to store the data in a formated manner i.e consolidating seperate ingredient key value pairs into one singular array of key : [array of ingredients for each drink in the data]
+            let formatedDrinks =[] // array to store the data in a formatted manner i.e consolidating separate ingredient key value pairs into one singular array of key : [array of ingredients for each drink in the data]
             
 
             // reformating data into the aforementioned format
