@@ -1,5 +1,4 @@
 # MixElixirAPI
-# Front-end https://github.com/nickbarr3160/mixElixir
 
 repository for backend REST API for mixElixir Application
 * This API is primarily built using Node.Js, Express, & Mongoose.
@@ -18,6 +17,7 @@ repository for backend REST API for mixElixir Application
 
 * server.js is the root file (index.js) where all the routes are called and used. The file is called server.js to support the server configurations where the API is hosted(Heroku in this case). 
 
+# Front-end https://github.com/nickbarr3160/mixElixir
 
 
 
